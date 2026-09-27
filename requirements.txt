@@ -1,0 +1,46 @@
+# AI Resume Screening - Production requirements
+# Python 3.11/3.12 recommended
+
+# Web application
+fastapi
+uvicorn[standard]
+streamlit
+
+# Configuration / validation
+python-dotenv
+pydantic
+pydantic-settings
+
+# API / authentication / database
+requests
+supabase
+
+# LLM / NLP / ML
+groq
+spacy
+sentence-transformers
+scikit-learn
+numpy
+pandas
+rapidfuzz
+
+# CPU-only PyTorch
+# Prevents pip from pulling large CUDA/NVIDIA packages on a small EC2 instance.
+torch==2.14.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Document parsing
+PyPDF2
+pdfplumber
+python-docx
+beautifulsoup4
+python-magic
+
+# PDF/report generation
+weasyprint
+jinja2
+
+# Note:
+# spaCy language models are installed separately:
+# python -m spacy download en_core_web_sm
+# python -m spacy download en_core_web_md
